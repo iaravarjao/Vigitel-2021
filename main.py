@@ -8,29 +8,28 @@ st.title("Painel de Saúde da População")
 st.header("Hipertensão")
 st.sidebar.title("Menu")
 selecionada = st.sidebar.selectbox("Escolha uma pesquisa:",
-                               ("MS, Vigitel, 2021", "IBGE, PNS, 2019"))
+                               ("Vigitel, 2021", "IBGE, 2019"))
 
-if  selecionada == "MS, Vigitel, 2021":
-    st.subheader("Análise de dados Ministério da Saúde")
-    st.markdown(" O Vigitel compõe o sistema de Vigilância de Fatores de Risco de DCNT \
-do Ministério da Saúde e, conjuntamente a outros inquéritos, como os domiciliares e em \
-populações escolares, vem ampliando o conhecimento sobre as DCNT no País.\
- Com ela é possível monitorar os principais determinantes das DCNT no Brasil e, \
+if  selecionada == "Vigitel, 2021":
+    st.subheader("Análise de dados do Ministério da Saúde")
+    st.markdown(" O Vigitel - Sistema de Vigilância de Fatores de Risco de Doenças Crônicas \
+Não Transmissíveis (DCNT) do Ministério da Saúde, conjuntamente a outros inquéritos, como os \
+domiciliares, vem ampliando o conhecimento sobre as DCNT no país. \
+Com ele é possível monitorar os principais determinantes das DCNT no Brasil e, \
 assim, apoiar a formulação de políticas públicas que promovam a melhoria da qualidade de \
 vida da população brasileira.\
-\n\n A coleta de dados do Vigitel é realizada por entrevista telefônica, por telefone fxo, \
-conduzida por uma empresa contratada especialmente para esse fim, no ano de 2021. Esta edição foi recém \
-publicada e está disponivel em URL \
-https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/publicacoes-svs/vigitel/vigitel-brasil-2021-estimativas-sobre-frequencia-e-distribuicao-sociodemografica-de-fatores-de-risco-e-protecao-para-doencas-cronicas/view \
-acesso em julho/2022. \
-\n\n Os resultados desse sistema subsidiam o monitoramento das metas propostas no Plano de Ações \
+\n\n A coleta de dados do Vigitel é realizada por entrevista telefônica, por telefone fixo, \
+conduzida por uma empresa contratada especialmente para esse fim, e esta, realizada no ano de 2021. \
+Esta edição foi recém publicada e está disponivel na URL http://plataforma.saude.gov.br/vigitel/ \
+(acesso em julho/2022). \
+\n\n Os resultados dessa pesquisa subsidiam o monitoramento das metas propostas no Plano de Ações \
 Estratégicas para o Enfrentamento das Doenças Crônicas Não Transmissíveis no Brasil 2011-2022, \
 assim como embasam as metas do Plano de Ações Estratégicas para o Enfrentamento \
-das Doenças Crônicas e Agravos não Transmissíveis no Brasil 2021-2030, o Plano\
- Regional (ORGANIZAÇÃO PAN-AMERICANA DA SAÚDE, 2014), o Plano de Ação Global para a Prevenção \
+das Doenças Crônicas e Agravos não Transmissíveis no Brasil 2021-2030, o Plano \
+Regional (ORGANIZAÇÃO PAN-AMERICANA DA SAÚDE, 2014), o Plano de Ação Global para a Prevenção \
 e Controle das DCNT, da Organização Mundial da Saúde (WORLD HEALTH ORGANIZATION, 2013), \
 bem como das metas de DCNT referentes à agenda 2030 dos Objetivos de Desenvolvimento Sustentável \
-(UNITED NATIONS, 2015)\
+(UNITED NATIONS, 2015).\
 \n\n Separei somente os dados relacionados à **hipertensão** e trago as visualizações a seguir, \
 que mostram maiores valores nas capitais do RJ, PE e MG, observando ainda, \
 por região, que as **mulheres** são maioria entre os acometidos pela doença." )
@@ -59,7 +58,7 @@ por região, que as **mulheres** são maioria entre os acometidos pela doença."
 
     if regiao == 'Norte':
         norte.plot(kind='barh', x= 'Capitais', y= ['feminino','masculino'], 
-    title= "Região Norte", color=['blue', 'lightblue'])
+    title= "Região Norte", color=['blue', 'lightsteelblue'])
         plt.xlabel('Valor percentual')
         st.pyplot(plt)
         st.caption('Secretaria de Vigilância em Saúde, MS, Vigitel, 2021')
@@ -85,8 +84,8 @@ por região, que as **mulheres** são maioria entre os acometidos pela doença."
         st.pyplot(plt)
         plt.xlabel('Valor percentual')
         
-elif selecionada == "IBGE, PNS, 2019":
-    st.subheader("Análise de dados IBGE")
+elif selecionada == "IBGE, 2019":
+    st.subheader("Análise de dados do IBGE")
     st.markdown("A Pesquisa Nacional de Saúde - PNS alerta sobre as condições de saúde \
         da população brasileira em relação à doenças crônicas \
         não transmissíveis (DCNT) e acesso a planos de saúde médicos. Os dados apresentados\
