@@ -8,7 +8,7 @@ st.title("Painel de Saúde da População")
 st.header("Hipertensão")
 st.sidebar.title("Menu")
 selecionada = st.sidebar.selectbox("Escolha uma pesquisa:",
-                               ("Vigitel, 2021", "IBGE, 2019"))
+                               ("Vigitel, 2021", "IBGE, 2020"))
 
 if  selecionada == "Vigitel, 2021":
     st.subheader("Análise de dados do Ministério da Saúde")
@@ -84,7 +84,7 @@ por região, que as **mulheres** são maioria entre os acometidos pela doença."
         st.pyplot(plt)
         plt.xlabel('Valor percentual')
         
-elif selecionada == "IBGE, 2019":
+elif selecionada == "IBGE, 2020":
     st.subheader("Análise de dados do IBGE")
     st.markdown("A Pesquisa Nacional de Saúde - PNS alerta sobre as condições de saúde \
         da população brasileira em relação à doenças crônicas \
