@@ -24,3 +24,9 @@ pip install streamlit
 ```
 streamlit run main.py
 ```
+
+Feito deploy da aplicação na nuvem Streamlit, e este foi o resultado:
+
+https://iaravarjao-vigitel-2021-main-hsymh1.streamlitapp.com/
+
+Estou a disposição para esclarecimentos e troca de ideias! 	:wink:
