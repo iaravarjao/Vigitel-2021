@@ -15,7 +15,8 @@ Apresento uma visualização desses dados com uso da biblioteca Streamlit, um fr
 ```
 python -m venv venv
 venv\Scripts\activate
-
+```
+```
 pip install pandas
 pip install streamlit
 ```
